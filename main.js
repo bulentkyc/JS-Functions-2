@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('Hello Functions-2');
 /* Function Syntaxes */
 
@@ -53,3 +55,66 @@ console.log(myThirdFunc);
 alert(myFirstFunc);
 alert(mySecFunc);
 alert(myThirdFunc());
+
+
+let age = prompt('How old are you?');
+
+if (age>18) {
+    function welcome() {
+        alert('Hello');
+    }
+    //welcome();
+} else {
+
+    function welcome() {
+        alert('Greetings');
+    }
+    //welcome();
+}
+
+//welcome(); Error welcome is not defined
+//let welcome;
+
+let welcome;
+
+if (age>18) {
+    welcome = function() {
+        alert('Hello');
+    }
+    //welcome();
+} else {
+
+    welcome = function() {
+        alert('Greetings');
+    }
+    //welcome();
+}
+
+welcome(); //works as well
+
+
+const myFunc = function (x,y) {
+    return x + y;
+}
+
+const myArFunc = (x,y) => {
+    return x + y
+}
+
+const myArFunc2 = (x,y) => x + y;
+
+//const myArFunc2 = (x,y) => x + y;   //returns x+y
+//const myArFunc2 = (x,y) => {x + y}; //calculates but not return x+y
+
+const myArFunc3 = x => x*5;
+
+
+/* 
+//SAME AS NEXT BLOCK
+x => x*5;
+
+//SAME AS PREVIOUS LINE
+function (x) {
+    return x*5;
+}
+ */
